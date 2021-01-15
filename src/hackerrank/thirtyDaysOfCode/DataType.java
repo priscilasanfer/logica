@@ -2,6 +2,10 @@ package hackerrank.thirtyDaysOfCode;
 
 import java.util.Scanner;
 
+/*
+https://www.hackerrank.com/challenges/30-data-types/problem
+ */
+
 public class DataType {
     public static void main(String[] args) {
         int i = 4;

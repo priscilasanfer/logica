@@ -2,6 +2,10 @@ package hackerrank.thirtyDaysOfCode;
 
 import java.util.Scanner;
 
+/*
+https://www.hackerrank.com/challenges/30-hello-world/problem
+ */
+
 public class HelloWorld {
     public static void main(String[] args) {
         // Create a Scanner object to read input from stdin.

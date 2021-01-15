@@ -4,6 +4,9 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner;
+/*
+https://www.hackerrank.com/challenges/simple-array-sum/problem
+ */
 
 public class SimpleArraySum {
     /*

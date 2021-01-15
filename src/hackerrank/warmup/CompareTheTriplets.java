@@ -5,6 +5,10 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+https://www.hackerrank.com/challenges/compare-the-triplets/problem
+ */
+
 public class CompareTheTriplets {
 
     // Complete the compareTriplets function below.

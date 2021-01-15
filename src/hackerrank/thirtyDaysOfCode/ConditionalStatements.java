@@ -1,6 +1,9 @@
 package hackerrank.thirtyDaysOfCode;
 
 import java.util.Scanner;
+/*
+https://www.hackerrank.com/challenges/30-conditional-statements/problem
+ */
 
 public class ConditionalStatements {
     public static void main(String[] args) {
