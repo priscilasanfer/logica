@@ -2,6 +2,10 @@ package hackerrank.warmup;
 
 import java.util.Scanner;
 
+/*
+https://www.hackerrank.com/challenges/staircase/problem
+ */
+
 public class Staircase {
     // Complete the staircase function below.
     static void staircase(int n) {
