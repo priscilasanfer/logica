@@ -25,17 +25,26 @@ For a = [2, 4, 3, 5, 1], the output should be firstDuplicate(a) = -1.
 
 public class FirstDuplicate {
     public static void main(String[] args) {
-        int[] ar= {2,1,3,5,3,2};
+        int[] array1 = {2, 1, 3, 5, 3, 2};
+        int[] array2 = {2, 2};
+        int[] array3 = {2, 4, 3, 5, 1};
 
+        System.out.println(firstDuplicate(array1));
+        System.out.println(firstDuplicate(array2));
+        System.out.println(firstDuplicate(array3));
+
+    }
+
+    private static int firstDuplicate(int[] a) {
         HashSet<Integer> resultado = new HashSet<>();
 
-        for (int i = 0; i < ar.length; i++) {
-            if (resultado.contains(ar[i])) {
-                System.out.println(ar[i]);
-                break;
+        for (int i = 0; i < a.length; i++) {
+            if (resultado.contains(a[i])) {
+                return a[i];
             } else
-                resultado.add(ar[i]);
+                resultado.add(a[i]);
         }
 
+        return -1;
     }
 }

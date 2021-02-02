@@ -37,7 +37,8 @@ grid = [['.', '.', '.', '.', '2', '.', '.', '9', '.'],
 the output should be
 sudoku2(grid) = false.
 
-The given grid is not correct because there are two 1s in the second column. Each column, each row, and each 3 × 3 subgrid can only contain the numbers 1 through 9 one time.
+The given grid is not correct because there are two 1s in the second column. Each column, each row, and each 3 × 3
+subgrid can only contain the numbers 1 through 9 one time.
  */
 
 import java.util.HashSet;
@@ -82,8 +83,8 @@ public class Suduko2 {
                 {'.', '.', '.', '8', '.', '.', '.', '.', '2'}
         };
 
-//        System.out.println(sudoku(grid));
-//        System.out.println(sudoku(grid2));
+        System.out.println(sudoku(grid));
+        System.out.println(sudoku(grid2));
         System.out.println(sudoku(grid3));
     }
 
@@ -91,17 +92,17 @@ public class Suduko2 {
     private static boolean sudoku(char[][] grid) {
 
         for (int row = 0; row < 9; row++) {
-//            HashSet<Character> linha = new HashSet<>();
-//            HashSet<Character> coluna = new HashSet<>();
+            HashSet<Character> linha = new HashSet<>();
+            HashSet<Character> coluna = new HashSet<>();
             HashSet<Character> box = new HashSet<>();
             for (int column = 0; column < 9; column++) {
-//                if (grid[row][column] != '.' && !linha.add(grid[row][column])) {
-//                    return false;
-//                }
-//
-//                if (grid[column][row] != '.' && !coluna.add(grid[column][row])) {
-//                    return false;
-//                }
+                if (grid[row][column] != '.' && !linha.add(grid[row][column])) {
+                    return false;
+                }
+
+                if (grid[column][row] != '.' && !coluna.add(grid[column][row])) {
+                    return false;
+                }
 
                 int rowindex = 3 * (row / 3);
                 int columnindex = 3 * (row % 3);

@@ -24,27 +24,37 @@ There are no characters in this string that do not repeat.
 
 public class FirstNotRepeatingCharacter {
     public static void main(String[] args) {
-        String texto = "abacabaabacaba";
+        String texto1 = "abacabad";
+        String texto2 = "abacabaabacaba";
+        String texto3 = "bcccccccb";
 
-        Set<Character> repetidas = new HashSet<>();
+        System.out.println(firstNotRepeatingCharacter(texto1));
+        System.out.println(firstNotRepeatingCharacter(texto2));
+        System.out.println(firstNotRepeatingCharacter(texto3));
+    }
+
+    public static char firstNotRepeatingCharacter(String s) {
+        HashSet<Character> repetidas = new HashSet<>();
         List<Character> naoRepetidas = new ArrayList<>();
 
-        for (int i = 0; i < texto.length() ; i++) {
-            char caracter = texto.charAt(i);
-            if(repetidas.contains(caracter)){
+        for (int i = 0; i < s.length(); i++) {
+            char character = s.charAt(i);
+
+            if(repetidas.contains(character)){
                 continue;
             }
-            if(naoRepetidas.contains(caracter)){
-                naoRepetidas.remove((Character) caracter);
-                repetidas.add(caracter);
-            }else {
-                naoRepetidas.add(caracter);
+
+            if (naoRepetidas.contains(character)) {
+                naoRepetidas.remove((Character) character);
+                repetidas.add(character);
+            } else {
+                naoRepetidas.add(character);
             }
         }
-        if (naoRepetidas.isEmpty()){
-            System.out.println("_");
-        }else {
-            System.out.println(naoRepetidas.get(0));
+        if (naoRepetidas.isEmpty()) {
+            return '_';
+        } else {
+            return naoRepetidas.get(0);
         }
     }
 }

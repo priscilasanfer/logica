@@ -49,7 +49,6 @@ public class IsCryptSolution {
     public static void main(String[] args) {
 
         String[] crypt = {"SEND", "MORE", "MONEY"};
-
         char[][] solution = {
                 {'O', '0'},
                 {'M', '1'},
@@ -61,9 +60,7 @@ public class IsCryptSolution {
                 {'S', '9'}
         };
 
-
         String[] crypt2 = {"TEN", "TWO", "ONE"};
-
         char[][] solution2 = {
                 {'O', '1'},
                 {'T', '0'},
@@ -72,16 +69,13 @@ public class IsCryptSolution {
                 {'N', '4'}
         };
 
-
         String[] crypt3 = {"A", "A", "A"};
-
         char[][] solution3 = {
                 {'A', '0'}
         };
 
-
-//        System.out.println(isCryptSolution(crypt, solution));
-//        System.out.println(isCryptSolution(crypt2, solution2));
+        System.out.println(isCryptSolution(crypt, solution));
+        System.out.println(isCryptSolution(crypt2, solution2));
         System.out.println(isCryptSolution(crypt3, solution3));
     }
 
@@ -93,13 +87,15 @@ public class IsCryptSolution {
             }
         }
 
-        if (crypt[0].startsWith("0") && crypt[0].length() != 1 || crypt[1].startsWith("0") && crypt[1].length() != 1 || crypt[2].startsWith("0") && crypt[2].length() != 1) {
+        if (crypt[0].startsWith("0") && crypt[0].length() != 1
+                || crypt[1].startsWith("0") && crypt[1].length() != 1
+                || crypt[2].startsWith("0") && crypt[2].length() != 1) {
             return false;
         }
 
-        Long firstWord = Long.parseLong(crypt[0]);
-        Long secondWord = Long.parseLong(crypt[1]);
-        Long thirdWord = Long.parseLong(crypt[2]);
+        long firstWord = Long.parseLong(crypt[0]);
+        long secondWord = Long.parseLong(crypt[1]);
+        long thirdWord = Long.parseLong(crypt[2]);
 
         return firstWord + secondWord == thirdWord;
     }
