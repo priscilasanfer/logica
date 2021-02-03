@@ -21,20 +21,9 @@ rotateImage(a) =
      [9, 6, 3]]
  */
 
-import java.util.Arrays;
-
 public class RotateImage {
-    public static void main(String[] args) {
-        int[][] array1 = {{1, 2, 3}, {4, 5, 6}, {7, 8, 9}};
-        int[][] array2 = {{1}};
-        int[][] array3 = {{10, 9, 6, 3, 7}, {6, 10, 2, 9, 7}, {7, 6, 3, 8, 2}, {8, 9, 7, 9, 9}, {6, 8, 6, 8, 2}};
 
-        System.out.println(Arrays.deepToString(rotateImage(array1)));
-        System.out.println(Arrays.deepToString(rotateImage(array2)));
-        System.out.println(Arrays.deepToString(rotateImage(array3)));
-    }
-
-    public static int[][] rotateImage(int[][] a) {
+    int[][] rotateImage(int[][] a) {
         int length = a.length;
         int[][] newArray = new int[length][length];
 
