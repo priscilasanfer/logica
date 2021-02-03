@@ -2,7 +2,6 @@ package codeSignal.interview.arrays;
 
 import java.util.HashSet;
 
-
 /*
 Given an array a that contains only numbers in the range from 1 to a.length, find the first duplicate number for which
 the second occurrence has the minimal index. In other words, if there are more than 1 duplicated numbers, return the
@@ -22,20 +21,9 @@ For a = [2, 4, 3, 5, 1], the output should be firstDuplicate(a) = -1.
 
 */
 
-
 public class FirstDuplicate {
-    public static void main(String[] args) {
-        int[] array1 = {2, 1, 3, 5, 3, 2};
-        int[] array2 = {2, 2};
-        int[] array3 = {2, 4, 3, 5, 1};
 
-        System.out.println(firstDuplicate(array1));
-        System.out.println(firstDuplicate(array2));
-        System.out.println(firstDuplicate(array3));
-
-    }
-
-    private static int firstDuplicate(int[] a) {
+    int firstDuplicate(int[] a) {
         HashSet<Integer> resultado = new HashSet<>();
 
         for (int i = 0; i < a.length; i++) {
@@ -44,7 +32,6 @@ public class FirstDuplicate {
             } else
                 resultado.add(a[i]);
         }
-
         return -1;
     }
 }
