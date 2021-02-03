@@ -3,7 +3,6 @@ package codeSignal.interview.arrays;
 import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 /*
 Given a string s consisting of small English letters, find and return the first instance of a non-repeating character
@@ -23,24 +22,15 @@ There are no characters in this string that do not repeat.
  */
 
 public class FirstNotRepeatingCharacter {
-    public static void main(String[] args) {
-        String texto1 = "abacabad";
-        String texto2 = "abacabaabacaba";
-        String texto3 = "bcccccccb";
 
-        System.out.println(firstNotRepeatingCharacter(texto1));
-        System.out.println(firstNotRepeatingCharacter(texto2));
-        System.out.println(firstNotRepeatingCharacter(texto3));
-    }
-
-    public static char firstNotRepeatingCharacter(String s) {
+    char firstNotRepeatingCharacter(String s) {
         HashSet<Character> repetidas = new HashSet<>();
         List<Character> naoRepetidas = new ArrayList<>();
 
         for (int i = 0; i < s.length(); i++) {
             char character = s.charAt(i);
 
-            if(repetidas.contains(character)){
+            if (repetidas.contains(character)) {
                 continue;
             }
 
