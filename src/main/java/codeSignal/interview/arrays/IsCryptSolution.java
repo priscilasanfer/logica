@@ -1,7 +1,5 @@
 package codeSignal.interview.arrays;
 
-import java.util.HashMap;
-
 /*
 A cryptarithm is a mathematical puzzle for which the goal is to find the correspondence between letters and digits,
 such that the given arithmetic equation consisting of letters holds true when the letters are converted to digits.
@@ -31,7 +29,8 @@ solution = [['O', '0'],
 the output should be
 isCryptSolution(crypt, solution) = true.
 
-When you decrypt "SEND", "MORE", and "MONEY" using the mapping given in crypt, you get 9567 + 1085 = 10652 which is correct and a valid arithmetic equation.
+When you decrypt "SEND", "MORE", and "MONEY" using the mapping given in crypt, you get 9567 + 1085 = 10652 which is
+correct and a valid arithmetic equation.
 
 For crypt = ["TEN", "TWO", "ONE"] and
 
@@ -46,44 +45,10 @@ isCryptSolution(crypt, solution) = false.
 Even though 054 + 091 = 145, 054 and 091 both contain leading zeroes, meaning that this is not a valid solution.
  */
 public class IsCryptSolution {
-    public static void main(String[] args) {
-
-        String[] crypt = {"SEND", "MORE", "MONEY"};
-        char[][] solution = {
-                {'O', '0'},
-                {'M', '1'},
-                {'Y', '2'},
-                {'E', '5'},
-                {'N', '6'},
-                {'D', '7'},
-                {'R', '8'},
-                {'S', '9'}
-        };
-
-        String[] crypt2 = {"TEN", "TWO", "ONE"};
-        char[][] solution2 = {
-                {'O', '1'},
-                {'T', '0'},
-                {'W', '9'},
-                {'E', '5'},
-                {'N', '4'}
-        };
-
-        String[] crypt3 = {"A", "A", "A"};
-        char[][] solution3 = {
-                {'A', '0'}
-        };
-
-        System.out.println(isCryptSolution(crypt, solution));
-        System.out.println(isCryptSolution(crypt2, solution2));
-        System.out.println(isCryptSolution(crypt3, solution3));
-    }
-
-    private static boolean isCryptSolution(String[] crypt, char[][] solution) {
+    boolean isCryptSolution(String[] crypt, char[][] solution) {
         for (char[] chars : solution) {
             for (int i = 0; i < 3; i++) {
                 crypt[i] = crypt[i].replace(chars[0], chars[1]);
-                System.out.println(crypt[i]);
             }
         }
 
@@ -100,4 +65,3 @@ public class IsCryptSolution {
         return firstWord + secondWord == thirdWord;
     }
 }
-
